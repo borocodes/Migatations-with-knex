@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require("path");
 require("dotenv").config;
 const { DATABASE_URL } = process.env;
 
@@ -8,6 +8,9 @@ module.exports = {
     connection: DATABASE_URL,
     migrations: {
       diectory: path.join(__dirname, "src", "db", "migrations"),
-    }
+    },
+    seeds: {
+      directory: path.join(__dirname, "src", "db", "seeds"),
+    },
   },
 };
